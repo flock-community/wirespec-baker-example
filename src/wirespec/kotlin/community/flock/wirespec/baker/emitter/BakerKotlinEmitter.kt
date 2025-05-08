@@ -19,8 +19,8 @@ class BakerKotlinEmitter(val packageName: PackageName, emitShared: EmitShared): 
                 val name = emit(it.identifier) + "Interaction"
                 Emitted("${packageName.toDir()}/interaction/${name}", """
                     package ${packageName.value}
-                    
-                    object ${name}
+
+                    object $name
                 """.trimIndent()) }
             )
     }
